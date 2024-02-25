@@ -2,6 +2,8 @@ import React from 'react'
 import NavBar from './NavBar'
 import ReactPlayer from 'react-player'
 import { Avatar } from '@mui/material'
+import ThumbUpIcon from '@mui/icons-material/ThumbUp';
+import ThumbDownIcon from '@mui/icons-material/ThumbDown';
 
 function Video() {
   return (
@@ -29,32 +31,103 @@ function Video() {
 
         <div className='flex'>
 
-          <div className='w-3/4 bg-red-200'>
-
-            <div className='flex items-center'> 
-
-              <div>
-                <Avatar>Rs</Avatar>
-              </div>
-
-              <div > 
-                <span>Admin</span>
-                <br/>
-                <button className='bg-red-600 text-xs p-1 rounded-md text-white'>Subscribe</button>
-              </div>
+          <div className='w-full '>
 
 
-            </div>
+            
+
+            
+
+
+
+
+
+
+
+        <div className='flex justify-between'>
+          <div className='flex items-center'> 
+
+              <div><Avatar>Rs</Avatar></div>
+
+
+               <div className='flex'>
+                 <div > <span>Admin</span><p className='text-xs'>4 Subscribers</p>
+                 </div>
+                 
+                 <div><button className='bg-red-600 text-xs p-1 rounded-md text-white'>Subscribe</button></div>
+                 
+                 </div>
+                 </div>
+
+                 
+<div>
+
+<div><span className='text-lg font-medium ml-16'>13,111</span></div>
+<div>
+
+</div>
+<span className='p-2'><ThumbUpIcon/>171</span>
+<span className='p-2'><ThumbDownIcon/>23</span></div>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+<div className='mt-4 flex justify-between border-b-2'>
+  <div>
+    
+
+  <span className='p-2'><ThumbUpIcon/>Like</span>
+<span className='p-2'><ThumbDownIcon/>Dislike</span>
+
+
+  </div>
+
+  <div>
+    <span className='mx-12 font-bold'>About</span>
+    <span className='mx-12'>Share</span>
+    <span className='mx-12'>More</span>
+  </div>
+</div>
+
+
+<span>1 year ago</span>
+//main
+
+<p>
+New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
           </div>
 
 
-          <div>
-
-            Recommendationsss
-
-          </div>
+          
         </div>
       </div>        
       </div>
