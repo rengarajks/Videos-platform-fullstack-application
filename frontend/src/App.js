@@ -12,7 +12,11 @@ function App() {
     <Routes>
 
       <Route exact path='/' Component={Home}/>
-      <Route path='/video' Component={Video}/>
+      {/* <Route path='/video' Component={Video}/> */}
+      <Route path='/video/:videoId' Component={Video}/>
+
+      
+      
 
 
     </Routes>

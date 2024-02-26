@@ -1,52 +1,51 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react'
+import axios from 'axios';
+
+import VideoCard from '../components/VideoCard';
 
 
 function Content() {
+
+  const[videoPost,setVideoPost]=useState()
+  axios.get('http://127.0.0.1:8000/api/video/').then(
+    response=>{
+      setVideoPost(response.data)
+      // console.log(videoPost)
+      
+    }
+  )
+
+  
+
   return (
-    <div className='mt-10  ml-72'>
+    <div className='mt-10  ml-80 mr-10'>
 
       <div className='flex justify-center'><div>
 
-          Home
-          Trending  </div>
+          
+          <span className='font-bold text-red-600 mr-1'>Home</span>
+          <span>Trending</span>
+            </div>
       </div>
 
-      <div className='p-3 grid grid-cols-4 gap-4'>
+      <div className='p-3 grid grid-cols-4 gap-5'>
 
 
         
 
 
+    {
+      videoPost && videoPost.map((video)=>(
+        <VideoCard video={video}/>
 
-      <Link to={'/video'}>
-
-      <div className=''>
-          
-          <div>
-          <img src='https://images.pexels.com/photos/4040649/pexels-photo-4040649.jpeg?auto=compress&cs=tinysrgb&w=600s'/>
-        
-          </div>
-
-          <div className='p-2'>
-          <div>
-            <span className='font-medium text-blue-600'>Checkout my new official video</span>
-          </div>
-
-          
-
-          <div className='text-gray-600 text-xs'>
-          <div>
-          <span>Creator</span>
-          </div>
-            <span>2,334 Views  </span>
-            <span> 2 years ago</span>
-          </div>
-          </div>
-
-        </div>
+      ))
+    }
       
-      </Link>
+
+      
+      
+      
+     
 
 
 

@@ -1,25 +1,44 @@
-import React from 'react'
+import React, { useState } from 'react'
 import NavBar from './NavBar'
 import ReactPlayer from 'react-player'
 import { Avatar } from '@mui/material'
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import ThumbDownIcon from '@mui/icons-material/ThumbDown';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
 
 function Video() {
+
+  const {videoId}=useParams()
+
+  const[video,setVideo]=useState()
+
+
+  axios.get(`http://127.0.0.1:8000/api/video/${videoId}`).then(
+    response=>{
+      setVideo(response.data)
+    }
+  )
+
+
+
+  
+  console.log(video)
+
   return (
 
     <>
     <NavBar/>
     <div className=''>
       
-      
+    
      
       
 
       <div className='mt-14  justify-center mr-96' > 
 
 
-      <ReactPlayer url='videos/Faded.mp4' controls={true} width='100%'/>
+      <ReactPlayer url={video?.Video} playing={true} controls={true} width='100%'/>
 
 
 
@@ -27,7 +46,7 @@ function Video() {
 
       <div className='p-2'>
 
-        <h1 className='text-2xl'>Checkout my new video</h1>
+        <h1 className='text-2xl'>{video?.Title}</h1>
 
         <div className='flex'>
 
@@ -62,12 +81,12 @@ function Video() {
                  
 <div>
 
-<div><span className='text-lg font-medium ml-16'>13,111</span></div>
+<div><span className='text-lg font-medium ml-16'>{video?.Views}</span></div>
 <div>
 
 </div>
-<span className='p-2'><ThumbUpIcon/>171</span>
-<span className='p-2'><ThumbDownIcon/>23</span></div>
+<span className='p-2'><ThumbUpIcon/>{video?.Likes}</span>
+<span className='p-2'><ThumbDownIcon/>{video?.Dislikes}</span></div>
 
 
 
@@ -101,9 +120,7 @@ function Video() {
 <span>1 year ago</span>
 
 
-<p>
-New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.
-</p>
+<p>{video?.Description}</p>
 
 <div className='flex justify-center py-4'>
   <div>Restricted mode</div>
@@ -137,9 +154,17 @@ New York City comprises 5 boroughs sitting where the Hudson River meets the Atla
 
 <div className='w-96 absolute right-0 top-0 mt-10 p-6'>
 
+
+
+
+
+
+    
 <div className='flex items-center'>
           
           <div className='w-1/2 '>
+
+
           <img className='rounded-md' src='https://images.pexels.com/photos/4040649/pexels-photo-4040649.jpeg?auto=compress&cs=tinysrgb&w=600s'/>
         
           </div>
@@ -165,6 +190,47 @@ New York City comprises 5 boroughs sitting where the Hudson River meets the Atla
 
         </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+        <div className='flex items-center'>
+          
+          <div className='w-1/2 '>
+
+
+          <img className='rounded-md' src='https://images.pexels.com/photos/4040649/pexels-photo-4040649.jpeg?auto=compress&cs=tinysrgb&w=600s'/>
+        
+          </div>
+
+         <div > 
+
+         <div className='p-2'>
+          <div>
+            <span className='font-medium text-blue-600'>Checkout my new official video</span>
+          </div>
+
+          
+
+          <div className='text-gray-600 text-xs'>
+          <div>
+          <span>Creator</span>
+          </div>
+            <span>2,334 Views  </span>
+            <span> 2 years ago</span>
+          </div>
+          </div>
+         </div>
+
+        </div>
 
 
 
