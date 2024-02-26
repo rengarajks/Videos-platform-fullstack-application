@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { createContext, useState } from 'react'
 import axios from 'axios';
 
 import VideoCard from '../components/VideoCard';
@@ -6,16 +6,23 @@ import VideoCard from '../components/VideoCard';
 
 function Content() {
 
+
+
+
   const[videoPost,setVideoPost]=useState()
   axios.get('http://127.0.0.1:8000/api/video/').then(
     response=>{
       setVideoPost(response.data)
-      // console.log(videoPost)
+      
       
     }
   )
 
-  
+
+
+  const postvideo=createContext()
+
+  // console.log(videoPost)
 
   return (
     <div className='mt-10  ml-80 mr-10'>

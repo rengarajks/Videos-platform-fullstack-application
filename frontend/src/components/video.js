@@ -12,6 +12,8 @@ function Video() {
   const {videoId}=useParams()
 
   const[video,setVideo]=useState()
+  // const[suggestions,setSuggestions]=useState()
+  
 
 
   axios.get(`http://127.0.0.1:8000/api/video/${videoId}`).then(
@@ -20,10 +22,17 @@ function Video() {
     }
   )
 
+  // axios.get(`http://127.0.0.1:8000/api/video/`).then(
+  //   resp=>{
+  //     setSuggestions(resp.data)
+
+  //   }
+  // )
+
 
 
   
-  console.log(video)
+
 
   return (
 
@@ -159,6 +168,12 @@ function Video() {
 
 
 
+
+
+
+
+
+
     
 <div className='flex items-center'>
           
@@ -202,35 +217,25 @@ function Video() {
 
 
 
-        <div className='flex items-center'>
-          
-          <div className='w-1/2 '>
 
 
-          <img className='rounded-md' src='https://images.pexels.com/photos/4040649/pexels-photo-4040649.jpeg?auto=compress&cs=tinysrgb&w=600s'/>
         
-          </div>
 
-         <div > 
 
-         <div className='p-2'>
-          <div>
-            <span className='font-medium text-blue-600'>Checkout my new official video</span>
-          </div>
 
-          
 
-          <div className='text-gray-600 text-xs'>
-          <div>
-          <span>Creator</span>
-          </div>
-            <span>2,334 Views  </span>
-            <span> 2 years ago</span>
-          </div>
-          </div>
-         </div>
 
-        </div>
+
+    
+
+
+
+
+
+
+
+
+        
 
 
 
