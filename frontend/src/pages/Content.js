@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+
 
 function Content() {
   return (
@@ -10,12 +12,14 @@ function Content() {
           Trending  </div>
       </div>
 
-      <div className='p-3 grid grid-cols-3 gap-4'>
+      <div className='p-3 grid grid-cols-4 gap-4'>
 
 
         
 
 
+
+      <Link to={'/video'}>
 
       <div className=''>
           
@@ -41,6 +45,8 @@ function Content() {
           </div>
 
         </div>
+      
+      </Link>
 
 
 

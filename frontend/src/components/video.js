@@ -99,14 +99,15 @@ function Video() {
 
 
 <span>1 year ago</span>
-//main
+
 
 <p>
 New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.
 </p>
 
-
-
+<div className='flex justify-center py-4'>
+  <div>Restricted mode</div>
+</div>
 
 
 
