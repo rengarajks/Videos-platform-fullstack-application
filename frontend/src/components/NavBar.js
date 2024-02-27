@@ -11,8 +11,10 @@ function NavBar() {
             
             <div className='px-2'><DensityMediumIcon /></div>
             <Link to={'/'}>
-            <img className='w-13 h-7 p-1' src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/502px-Logo_of_YouTube_%282015-2017%29.svg.png' />
-        
+            
+            <span className='font-bold text-red-600'>My</span>
+            <span className='font-bold' text-gray-600>Tube</span>
+
             </Link>
             </div>
         

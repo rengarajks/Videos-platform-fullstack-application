@@ -31,7 +31,7 @@ function Content() {
 
           
           <span className='font-bold text-red-600 mr-1'>Home</span>
-          <span>Trending</span>
+          <span className='font-medium'>Trending</span>
             </div>
       </div>
 

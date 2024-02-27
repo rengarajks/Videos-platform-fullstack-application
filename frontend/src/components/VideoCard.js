@@ -13,7 +13,19 @@ function VideoCard(props) {
     
   }
 
+  const videos = document.querySelectorAll('video');
 
+  videos.forEach(video => {
+    video.addEventListener('mouseenter', () => {
+      video.play();
+      
+    });
+    
+    video.addEventListener('mouseleave', () => {
+      video.pause();
+      video.currentTime = 0;
+    });
+  });
 
   return (
     <div className='hover:scale-110   transition duration-200 '>
@@ -21,7 +33,8 @@ function VideoCard(props) {
         <Link to={`/video/${props.video.id}`} >
         <div onMouseOver={moused} >
            
-          <ReactPlayer url={props.video.Video} height='50%'  width='100%'  />
+          {/* <ReactPlayer url={props.video.Video} height='50%'   width='100%'  /> */}
+          <video src={props.video.Video}  width="750" height="500" ></video>
         
           </div>
 
