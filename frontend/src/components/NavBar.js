@@ -25,9 +25,12 @@ function NavBar() {
         </div>
 
         <div className='m-1'> 
-            <button className=' rounded-md bg-gray-200 px-2 py-1'>Upload</button>
+            <Link to={'/upload'}><button className=' rounded-md bg-gray-200 px-2 py-1'>Upload</button></Link>
             <button className='text-white rounded-md bg-blue-500 px-2 py-1 mx-2'>Sign in</button>
         </div>
+
+
+        
 
         </div>
   )

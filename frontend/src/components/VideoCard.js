@@ -16,16 +16,16 @@ function VideoCard(props) {
 
 
   return (
-    <div className='hover:scale-110 transition duration-200 '>
+    <div className='hover:scale-110   transition duration-200 '>
 
         <Link to={`/video/${props.video.id}`} >
         <div onMouseOver={moused} >
            
-          <ReactPlayer url={props.video.Video}   width='100%'  />
+          <ReactPlayer url={props.video.Video} height='50%'  width='100%'  />
         
           </div>
 
-          <div className='p-2 relative bottom-20'>
+          <div className='p-2 relative '>
           <div>
             <span className='font-medium text-blue-600'>{props.video.Title}</span>
           </div>

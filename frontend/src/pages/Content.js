@@ -27,7 +27,7 @@ function Content() {
   return (
     <div className='mt-10  ml-80 mr-10'>
 
-      <div className='flex justify-center'><div>
+      <div className=' flex justify-center bg-white'><div>
 
           
           <span className='font-bold text-red-600 mr-1'>Home</span>
